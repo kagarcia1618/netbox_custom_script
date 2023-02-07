@@ -1,5 +1,5 @@
 # Netbox Custom Script
-This is a repository of NetBox custom scripts.
+This is a repository of my NetBox custom scripts for the community.
 
 ## Device Type Provisioning
 If you have the following use cases, this NetBox custom script might be of help to you:
