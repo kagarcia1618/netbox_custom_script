@@ -1,2 +1,2 @@
-# netbox_custom_script
+# Netbox Custom Script
 This is a repository of NetBox custom scripts.
