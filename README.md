@@ -11,7 +11,7 @@ Tested working on:
 - NetBox v3.4.2 (Native Linux installation)
 - Python 3.9.9
 
-***Note:*** *This guide was made in the assumption that you have installed your NetBox following the [NetBox Installation Guide](https://docs.netbox.dev/en/stable/installation/).*
+***Note:*** *This guide was made in the assumption that you have installed your NetBox following the [NetBox Installation Guide](https://docs.netbox.dev/en/stable/installation/). ***Internet connectivity is also required*** from your NetBox host to connect to the NetBox devicetype library github repository for fetching the per hardware model yaml template file.*
 
 ### Procedure
 ***Note:*** Steps 1 to 3 are mandatory as I have introduced here a custom class object and a jinja template on a separate directory. Please be guided accordingly.
