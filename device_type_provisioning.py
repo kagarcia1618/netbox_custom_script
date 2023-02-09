@@ -58,8 +58,12 @@ class ImportDeviceType(Script):
                 for part_number in vendor['part_numbers']:
                     if part_number:
                         device_type_url = f"https://raw.githubusercontent.com/netbox-community/devicetype-library/master/device-types/{vendor['vendor']}/{part_number}"
-                        get_yml_url = requests.get(f"{device_type_url}.yml")
-                        get_yaml_url = requests.get(f"{device_type_url}.yaml")
+                        try:
+                            get_yml_url = requests.get(f"{device_type_url}.yml")
+                            get_yaml_url = requests.get(f"{device_type_url}.yaml")
+                        except requests.exceptions.ConnectionError as error:
+                            self.log_failure(error)
+                            return
                         get_url_data = None
                         for get_data in [get_yml_url, get_yaml_url]:
                             #Checks if user provided partnumber is found in devicetype-library git repo
